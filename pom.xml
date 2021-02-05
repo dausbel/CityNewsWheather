@@ -9,6 +9,30 @@
     <packaging>jar</packaging>
     <name>City News And Weather</name>
 
+    <description>Testing.</description>
+    <url>https://github.com/dausbel/CityNewsWheather</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com:dausbel/CityNewsWheather.gitt</connection>
+        <developerConnection>scm:git:ssh://github.com:dausbel/CityNewsWheather.git</developerConnection>
+        <url>https://github.com/dausbel/CityNewsWheather/tree/master</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Dausbel Torreblanca</name>
+            <email>dausbel.td@gmail.com</email>
+            <organization>FreeLance</organization>
+            <organizationUrl>http:/freelance.com</organizationUrl>
+        </developer>
+    </developers>
+
     <repositories>
         <!-- jhipster-needle-maven-repository -->
     </repositories>
