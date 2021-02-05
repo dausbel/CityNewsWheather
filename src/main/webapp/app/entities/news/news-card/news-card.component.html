@@ -1,0 +1,31 @@
+<div class="card jh-card" *ngIf="news">
+  <div class="row">
+    <div class="col-8 col-md-10">
+      <b>{{ news.authorName }}</b>
+    </div>
+    <div class="col-4 col-md-2 text-right">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-default no-arrow" ngbDropdownToggle><fa-icon icon="ellipsis-h"></fa-icon></button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu dropdown-menu-left">
+          <button ngbDropdownItem [routerLink]="['/news', news.id, 'view']">{{ 'cityNewsAndWeatherApp.news.details' | translate }}</button>
+          <button ngbDropdownItem *ngIf="news.owner" [routerLink]="['/news', news.id, 'edit']">
+            {{ 'entity.action.edit' | translate }}
+          </button>
+          <button ngbDropdownItem *ngIf="news.owner" (click)="delete(news)">
+            {{ 'entity.action.delete' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      {{ news.title }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-right">
+      {{ news.createAt | date }}
+    </div>
+  </div>
+</div>

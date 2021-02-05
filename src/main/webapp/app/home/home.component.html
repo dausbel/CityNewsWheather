@@ -1,0 +1,30 @@
+<div class="row mt-3">
+  <div class="col-md-12 text-center">
+    <h1 class="display-4" jhiTranslate="home.title">Welcome, Java Hipster!</h1>
+
+    <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+    <div [ngSwitch]="isAuthenticated()" class="my-4">
+      <div *ngSwitchCase="false">
+        <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&nbsp;
+        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-3">
+        <div class="card jh-card p-4 text-center">
+          <fa-icon icon="newspaper" class="my-4" transform="grow-20" [fixedWidth]="true"></fa-icon>
+          <p class="lead" style="font-weight: bolder;" jhiTranslate="home.news">News Section</p>
+          <button class="btn btn-primary mt-2" routerLink="/news">{{ 'home.view' | translate }}</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card jh-card p-4 text-center">
+          <fa-icon icon="cloud-sun-rain" class="my-4" transform="grow-20" [fixedWidth]="true"></fa-icon>
+          <p class="lead" style="font-weight: bolder;" jhiTranslate="home.weather">News Section</p>
+          <button class="btn btn-primary mt-2" routerLink="/weather">{{ 'home.view' | translate }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
